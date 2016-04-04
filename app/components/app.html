@@ -2,17 +2,17 @@
     <div class="row">
         <div class="col-md-8 col-md-offset-2">
             <div class="panel panel-default">
-                <div class="panel-body">
 
-                    <img src="/images/restauran.jpg" class="img-responsive img-thumbnail" alt=""/>
-
-                    <div class="form-group">
-                        <textarea class="form-control" (keydown)="updateStar($event)" placeholder="Your Command About This Restorant"></textarea>
-                    </div>
-                </div>
                 <div class="panel-footer">
                     <stars [rate]="rate"></stars>
                 </div>
+
+                <div class="panel-body">
+                    <div class="form-group">
+                        <textarea class="form-control" (keydown)="updateStar($event)" placeholder="Please write your review"></textarea>
+                    </div>
+                </div>
+
             </div>
         </div>
     </div>

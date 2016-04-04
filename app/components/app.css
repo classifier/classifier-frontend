@@ -5,3 +5,8 @@ img {
 .panel{
   margin-top: 20px;
 }
+
+.form-control {
+  font-size: 21px;
+  min-height: 150px;
+}
