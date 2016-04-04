@@ -1,11 +1,11 @@
-#Frontend for classifer project
+# Classifier Frontend
 
-Installation
+Install:
 ```
 npm install
 ```
 
-Run
+Run:
 ```
 npm start
 ```
