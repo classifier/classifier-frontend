@@ -1,0 +1,6 @@
+<div class="rating">
+    <template ngFor #s [ngForOf]="stars">
+        <span *ngIf="rate >= s">&#9733;</span>
+        <span *ngIf="s > rate">&#9734;</span>
+    </template>
+</div>
