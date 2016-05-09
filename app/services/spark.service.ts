@@ -7,7 +7,7 @@ export class SparkService {
     constructor(private http: Http) { }
 
     getStars(callback: (star: number) => void) {
-        this.http.get('localhost:8000/predict')
+        this.http.get('http://localhost:8000/predict/')
             .map(response => response.json())
             .subscribe(data => {
             callback(data["result"]);
