@@ -39,15 +39,21 @@
         <script src="node_modules/angular2/bundles/router.dev.js"></script>
         <script src="node_modules/angular2/bundles/http.dev.js"></script>
         <script>
-            System.config({
-                packages: {
-                    app: {
-                        format: 'register',
-                        defaultExtension: 'js'
-                    }
-                }
-            });
-            System.import ('app/boot').then(null, console.error.bind(console));
+          System.config({
+              map: {
+                  rxjs: 'node_modules/rxjs',
+              },
+              packages: {
+                  rxjs: {
+                      defaultExtension: 'js'
+                  },
+                  app: {
+                      format: 'register',
+                      defaultExtension: 'js'
+                  }
+              }
+          });
+          System.import ('app/boot').then(null, console.error.bind(console));
         </script>
 
     </head>

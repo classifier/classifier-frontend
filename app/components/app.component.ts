@@ -1,6 +1,7 @@
 import {Component} from 'angular2/core';
 import {StarsComponent} from './stars/stars.component';
 import {SparkService} from '../services/spark.service';
+import 'rxjs/Rx';
 
 @Component({
     selector: 'app',
@@ -10,13 +11,14 @@ import {SparkService} from '../services/spark.service';
 })
 export class AppComponent {
     rate: number;
+
     constructor(private sp: SparkService) {
         this.rate = 3;
     }
 
     updateStar(event) {
         if (event.code == 'Space') {
-            this.rate = this.sp.getStars();
+          this.sp.getStars(star => this.rate = star);
         }
     }
 }
